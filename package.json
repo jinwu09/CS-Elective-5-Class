@@ -1,0 +1,19 @@
+{
+  "name": "sample-cselective-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "cd backend && php -S localhost:8080 routes.php",
+    "dev:database": "mysqld --port=3306",
+    "serve": "concurrently -n \"Backend,MySQL\" -c \"green,blue\" \"npm run dev:backend\"",
+    "end:database":"mysqladmin -u root -p shutdown",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
