@@ -7,4 +7,5 @@ class Auth
         $this->pdo = $pdo;
         $this->gm = $gm;
     }
+
 }

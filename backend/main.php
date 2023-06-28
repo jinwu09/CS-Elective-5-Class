@@ -24,8 +24,8 @@ $payroll = new Payroll($pdo, $gm, $auth);
 $req = [];
 if (isset($_REQUEST['request']))
     $req = explode('/', rtrim($_REQUEST['request'], '/'));
-else $req = array("errorcatcher");
-// echo $_SERVER['REQUEST_METHOD'];
+else
+    $req = array("errorcatcher");
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         $state = array(
@@ -36,7 +36,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         http_response_code(403);
         break;
     case 'POST':
-        echo "working";
         require_once($apiPath . "/controller/Payroll.routes.php");
         # code...
         break;
