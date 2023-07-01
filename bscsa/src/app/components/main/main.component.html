@@ -1,0 +1,25 @@
+<p>main works!</p>
+<button (click)="isShow = !isShow">hide</button>
+
+<div *ngIf="isShow">
+  <table border="1">
+    <thead>
+      <th>#</th>
+      <th>fname</th>
+      <th>lname</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fname of fnames; let i = index">
+        <td>{{ i }}</td>
+        <td>{{ fname }}</td>
+        <td>{{ lnames[i] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div></div>
+
+<div>
+  <input type="text" [(ngModel)]="fnames[0]" />
+</div>
